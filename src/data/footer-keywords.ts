@@ -34,7 +34,7 @@ export const FOOTER_SEO_KEYWORDS: FooterKeywordLink[] = [
   { label: "Paradise Valley and desert", tourId: "paradise-desert-combo" },
   { label: "Tours from Agadir Morocco", tourId: "desert-trip" },
   { label: "Excursions Agadir Morocco", tourId: "quad-bike" },
-  { label: "Book tour Morocco", tourId: "marrakech-day-trip" },
+  { label: "Excursions Tours Flat Morocco", tourId: "marrakech-day-trip" },
   { label: "Morocco adventure tours", tourId: "buggy-tour" },
   { label: "Atlantic coast tours Morocco", tourId: "boat-trip" },
   { label: "Berber village tour Agadir", tourId: "small-desert" },

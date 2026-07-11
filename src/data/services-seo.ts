@@ -756,7 +756,7 @@ export function getServicePageMeta(locale: Locale, serviceId: ServiceCategoryId)
       "Agadir",
       "Taghazout",
       "Morocco",
-      "Book Tour Excursions",
+      "Excursions Tours Flat",
       "Souss-Massa",
     ],
   };

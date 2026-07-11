@@ -21,7 +21,7 @@ export const GMB_LOCALE: Record<Locale, GmbContent> = {
     eyebrow: "Find us",
     title: "Visit us in Sonaba, Agadir",
     description:
-      "Our office is on Google Maps — same listing as Book Tour Excursions. Drop by, get directions, or leave a review after your trip.",
+      "Our office is on Google Maps — same listing as Excursions Tours Flat. Drop by, get directions, or leave a review after your trip.",
     addressLabel: "Address",
     phoneLabel: "Phone",
     hoursLabel: "Opening hours",
@@ -31,13 +31,13 @@ export const GMB_LOCALE: Record<Locale, GmbContent> = {
     directions: "Get directions",
     viewOnGoogle: "View on Google",
     leaveReview: "Leave a Google review",
-    mapTitle: "Book Tour Excursions on Google Maps — Sonaba, Agadir",
+    mapTitle: "Excursions Tours Flat on Google Maps — Sonaba, Agadir",
   },
   fr: {
     eyebrow: "Nous trouver",
     title: "Retrouvez-nous à Sonaba, Agadir",
     description:
-      "Notre bureau est sur Google Maps — la même fiche Book Tour Excursions. Passez nous voir, obtenez l'itinéraire ou laissez un avis après votre excursion.",
+      "Notre bureau est sur Google Maps — la même fiche Excursions Tours Flat. Passez nous voir, obtenez l'itinéraire ou laissez un avis après votre excursion.",
     addressLabel: "Adresse",
     phoneLabel: "Téléphone",
     hoursLabel: "Horaires",
@@ -47,13 +47,13 @@ export const GMB_LOCALE: Record<Locale, GmbContent> = {
     directions: "Itinéraire",
     viewOnGoogle: "Voir sur Google",
     leaveReview: "Laisser un avis Google",
-    mapTitle: "Book Tour Excursions sur Google Maps — Sonaba, Agadir",
+    mapTitle: "Excursions Tours Flat sur Google Maps — Sonaba, Agadir",
   },
   es: {
     eyebrow: "Ubicación",
     title: "Estamos en Sonaba, Agadir",
     description:
-      "Nuestra oficina está en Google Maps — el mismo perfil de Book Tour Excursions. Pasa a vernos, pide indicaciones o deja una reseña después del tour.",
+      "Nuestra oficina está en Google Maps — el mismo perfil de Excursions Tours Flat. Pasa a vernos, pide indicaciones o deja una reseña después del tour.",
     addressLabel: "Dirección",
     phoneLabel: "Teléfono",
     hoursLabel: "Horario",
@@ -63,13 +63,13 @@ export const GMB_LOCALE: Record<Locale, GmbContent> = {
     directions: "Cómo llegar",
     viewOnGoogle: "Ver en Google",
     leaveReview: "Dejar reseña en Google",
-    mapTitle: "Book Tour Excursions en Google Maps — Sonaba, Agadir",
+    mapTitle: "Excursions Tours Flat en Google Maps — Sonaba, Agadir",
   },
   de: {
     eyebrow: "Standort",
     title: "Besuchen Sie uns in Sonaba, Agadir",
     description:
-      "Unser Büro steht auf Google Maps — dasselbe Profil wie Book Tour Excursions. Kommen Sie vorbei, holen Sie sich die Route oder hinterlassen Sie eine Bewertung.",
+      "Unser Büro steht auf Google Maps — dasselbe Profil wie Excursions Tours Flat. Kommen Sie vorbei, holen Sie sich die Route oder hinterlassen Sie eine Bewertung.",
     addressLabel: "Adresse",
     phoneLabel: "Telefon",
     hoursLabel: "Öffnungszeiten",
@@ -79,13 +79,13 @@ export const GMB_LOCALE: Record<Locale, GmbContent> = {
     directions: "Route planen",
     viewOnGoogle: "Auf Google ansehen",
     leaveReview: "Google-Bewertung schreiben",
-    mapTitle: "Book Tour Excursions auf Google Maps — Sonaba, Agadir",
+    mapTitle: "Excursions Tours Flat auf Google Maps — Sonaba, Agadir",
   },
   pl: {
     eyebrow: "Lokalizacja",
     title: "Odwiedź nas w Sonaba, Agadir",
     description:
-      "Nasze biuro jest na Google Maps — ten sam profil Book Tour Excursions. Wpadnij, wyznacz trasę lub zostaw opinię po wycieczce.",
+      "Nasze biuro jest na Google Maps — ten sam profil Excursions Tours Flat. Wpadnij, wyznacz trasę lub zostaw opinię po wycieczce.",
     addressLabel: "Adres",
     phoneLabel: "Telefon",
     hoursLabel: "Godziny otwarcia",
@@ -95,13 +95,13 @@ export const GMB_LOCALE: Record<Locale, GmbContent> = {
     directions: "Wskazówki dojazdu",
     viewOnGoogle: "Zobacz w Google",
     leaveReview: "Dodaj opinię w Google",
-    mapTitle: "Book Tour Excursions na Google Maps — Sonaba, Agadir",
+    mapTitle: "Excursions Tours Flat na Google Maps — Sonaba, Agadir",
   },
   ar: {
     eyebrow: "موقعنا",
     title: "زورونا في سونابا، أكادير",
     description:
-      "مكتبنا على خرائط Google — نفس ملف Book Tour Excursions. مرّ علينا، احصل على الاتجاهات، أو اترك تقييماً بعد رحلتك.",
+      "مكتبنا على خرائط Google — نفس ملف Excursions Tours Flat. مرّ علينا، احصل على الاتجاهات، أو اترك تقييماً بعد رحلتك.",
     addressLabel: "العنوان",
     phoneLabel: "الهاتف",
     hoursLabel: "ساعات العمل",
@@ -111,6 +111,6 @@ export const GMB_LOCALE: Record<Locale, GmbContent> = {
     directions: "الاتجاهات",
     viewOnGoogle: "عرض على Google",
     leaveReview: "اترك تقييماً على Google",
-    mapTitle: "Book Tour Excursions على خرائط Google — سونابا، أكادير",
+    mapTitle: "Excursions Tours Flat على خرائط Google — سونابا، أكادير",
   },
 };

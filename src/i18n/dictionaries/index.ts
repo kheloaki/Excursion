@@ -9,13 +9,13 @@ import { plDictionary } from "./locale-pl";
 const dictionaries: Record<Locale, DictionaryBase> = {
   en: {
     meta: {
-      siteName: "Book Tour Excursions",
+      siteName: "Excursions Tours Flat",
       tagline: "Morocco · Tours & Activities",
-      seoTitle: "Book Tour Excursions | Things to Do in Morocco — Tours & Activities",
+      seoTitle: "Excursions Tours Flat | Things to Do in Morocco — Tours & Activities",
       seoDescription:
         "Day trips and tours from Agadir — desert, quad, Paradise Valley, Marrakech & Essaouira. Pickup from your hotel. Book on WhatsApp.",
       keywords: [
-        "Book Tour Excursions",
+        "Excursions Tours Flat",
         "things to do Morocco",
         "things to do Agadir",
         "Morocco tours",
@@ -256,12 +256,12 @@ const dictionaries: Record<Locale, DictionaryBase> = {
   },
   fr: {
     meta: {
-      siteName: "Book Tour Excursions",
+      siteName: "Excursions Tours Flat",
       tagline: "Agadir · Maroc",
-      seoTitle: "Book Tour Excursions Agadir | Que Faire à Agadir & Taghazout",
-      seoDescription: "Réservez des excursions inoubliables à Agadir avec Book Tour Excursions. Désert, quad, Paradise Valley, Marrakech. Avis 5 étoiles.",
+      seoTitle: "Excursions Tours Flat Agadir | Que Faire à Agadir & Taghazout",
+      seoDescription: "Réservez des excursions inoubliables à Agadir avec Excursions Tours Flat. Désert, quad, Paradise Valley, Marrakech. Avis 5 étoiles.",
       keywords: [
-        "Book Tour Excursions Agadir",
+        "Excursions Tours Flat Agadir",
         "que faire Agadir",
         "excursions Agadir",
         "Taghazout"
@@ -280,7 +280,7 @@ const dictionaries: Record<Locale, DictionaryBase> = {
       about: "À propos",
     },
     hero: {
-      eyebrow: "Book Tour Excursions · Agadir",
+      eyebrow: "Excursions Tours Flat · Agadir",
       title: "Expériences Marocaines",
       titleAccent: "d'Exception",
       subtitle: "Couchers de soleil dans le désert, vallées cachées et aventures côtières — excursions sélectionnées avec prise en charge hôtel et guides experts à Agadir & Taghazout.",
@@ -334,7 +334,7 @@ const dictionaries: Record<Locale, DictionaryBase> = {
     },
     why: {
       eyebrow: "Pourquoi Nous",
-      title: "La Différence Book Tour Excursions",
+      title: "La Différence Excursions Tours Flat",
       description: "Le luxe, c'est la simplicité de chaque détail.",
       items: [
         {
@@ -375,7 +375,7 @@ const dictionaries: Record<Locale, DictionaryBase> = {
       requestQuote: "Devis",
       guestRating: "note clients",
       whatsIncluded: "Inclus",
-      whyBook: "Pourquoi réserver avec Book Tour Excursions Agadir?",
+      whyBook: "Pourquoi réserver avec Excursions Tours Flat Agadir?",
       related: "Vous Aimerez Aussi",
       photoGallery: "Galerie Photos",
       bookWhatsapp: "Réserver sur WhatsApp",
@@ -394,7 +394,7 @@ const dictionaries: Record<Locale, DictionaryBase> = {
       explore: "Explorer",
       contact: "Contact",
       rights: "Tous droits réservés.",
-      seoLine: "Book Tour Excursions Agadir — Que faire à Agadir & Taghazout",
+      seoLine: "Excursions Tours Flat Agadir — Que faire à Agadir & Taghazout",
       links: {
         allExcursions: "Toutes les Excursions",
         about: "À Propos",
@@ -456,7 +456,7 @@ const dictionaries: Record<Locale, DictionaryBase> = {
         title: "Politique de Confidentialité",
         eyebrow: "Légal",
         description:
-          "Comment Book Tour Excursions collecte et utilise vos données lors d'une demande ou réservation à Agadir, Maroc.",
+          "Comment Excursions Tours Flat collecte et utilise vos données lors d'une demande ou réservation à Agadir, Maroc.",
         sections: [
           {
             title: "Données Collectées",
@@ -476,7 +476,7 @@ const dictionaries: Record<Locale, DictionaryBase> = {
         title: "Conditions Générales",
         eyebrow: "Légal",
         description:
-          "Conditions de réservation pour excursions et transferts avec Book Tour Excursions — Agadir, Maroc.",
+          "Conditions de réservation pour excursions et transferts avec Excursions Tours Flat — Agadir, Maroc.",
         sections: [
           {
             title: "Réservations",
@@ -503,12 +503,12 @@ const dictionaries: Record<Locale, DictionaryBase> = {
   pl: plDictionary,
   ar: {
     meta: {
-      siteName: "Book Tour Excursions",
+      siteName: "Excursions Tours Flat",
       tagline: "أكادير · المغرب",
-      seoTitle: "Book Tour Excursions أكادير | أشياء للقيام بها في أكادير وتاغازوت",
+      seoTitle: "Excursions Tours Flat أكادير | أشياء للقيام بها في أكادير وتاغازوت",
       seoDescription: "احجز رحلات لا تُنسى في أكادير. صحراء، كواد، وادي الجنة، مراكش. تقييم 5 نجوم.",
       keywords: [
-        "Book Tour Excursions أكادير",
+        "Excursions Tours Flat أكادير",
         "أشياء للقيام بها أكادير",
         "رحلات أكادير"
       ],
@@ -526,7 +526,7 @@ const dictionaries: Record<Locale, DictionaryBase> = {
       about: "من نحن",
     },
     hero: {
-      eyebrow: "Book Tour Excursions · أكادير",
+      eyebrow: "Excursions Tours Flat · أكادير",
       title: "تجارب مغربية",
       titleAccent: "مختارة",
       subtitle: "غروب الصحراء، الوديان الخفية ومغامرات ساحلية — رحلات منتقاة مع استقبال من الفندق ومرشدين خبراء في أكادير وتاغازوت.",
@@ -580,7 +580,7 @@ const dictionaries: Record<Locale, DictionaryBase> = {
     },
     why: {
       eyebrow: "لماذا نحن",
-      title: "فرق Book Tour Excursions",
+      title: "فرق Excursions Tours Flat",
       description: "الفخامة في سهولة كل تفصيلة.",
       items: [
         {
@@ -621,7 +621,7 @@ const dictionaries: Record<Locale, DictionaryBase> = {
       requestQuote: "اطلب عرضاً",
       guestRating: "تقييم الضيوف",
       whatsIncluded: "ما يشمله",
-      whyBook: "لماذا الحجز مع Book Tour Excursions أكادير؟",
+      whyBook: "لماذا الحجز مع Excursions Tours Flat أكادير؟",
       related: "قد يعجبك أيضاً",
       photoGallery: "معرض الصور",
       bookWhatsapp: "احجز عبر واتساب",
@@ -640,7 +640,7 @@ const dictionaries: Record<Locale, DictionaryBase> = {
       explore: "استكشف",
       contact: "اتصل",
       rights: "جميع الحقوق محفوظة.",
-      seoLine: "Book Tour Excursions أكادير — أشياء للقيام بها في أكادير",
+      seoLine: "Excursions Tours Flat أكادير — أشياء للقيام بها في أكادير",
       links: {
         allExcursions: "جميع الرحلات",
         about: "من نحن",

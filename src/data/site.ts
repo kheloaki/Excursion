@@ -2,7 +2,7 @@ import { SITE_IMAGES } from "./tour-images";
 import type { TourId } from "./tours/types";
 
 export const SITE = {
-  name: "Book Tour Excursions",
+  name: "Excursions Tours Flat",
   tagline: "Morocco Tours & Excursions",
   domain: "https://booktourexcursions.com",
   email: "info@booktourexcursions.com",
@@ -31,14 +31,14 @@ export const SITE = {
     reviewUrl: "https://share.google/L3KUb1oer9PeJ3hoA",
   },
   description:
-    "Book Tour Excursions — day trips and activities from Agadir and Taghazout. Desert, coast, Atlas day trips, transfers.",
+    "Excursions Tours Flat — day trips and activities from Agadir and Taghazout. Desert, coast, Atlas day trips, transfers.",
   seoTitle:
-    "Book Tour Excursions | Things to Do in Morocco — Tours & Activities",
+    "Excursions Tours Flat | Things to Do in Morocco — Tours & Activities",
   seoDescription:
-    "Book tours and excursions across Morocco with Book Tour Excursions. Desert trips, quad biking, Paradise Valley, Marrakech & Essaouira day trips, camel rides, boat tours. WhatsApp booking from Agadir.",
+    "Book tours and excursions across Morocco with Excursions Tours Flat. Desert trips, quad biking, Paradise Valley, Marrakech & Essaouira day trips, camel rides, boat tours. WhatsApp booking from Agadir.",
   heroImage: SITE_IMAGES.hero,
   fleetImage: SITE_IMAGES.fleet,
-  logoText: "BOOK TOUR EXCURSIONS",
+  logoText: "EXCURSIONS TOURS FLAT",
   logoSubtext: "MOROCCO TOURS & ACTIVITIES",
   social: {
     facebook: "#",

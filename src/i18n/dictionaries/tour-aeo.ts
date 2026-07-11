@@ -33,7 +33,7 @@ export const TOUR_AEO: Record<Locale, TourAeoContent> = {
         answer: "Allow {duration}. Exact pickup time depends on your hotel and the season.",
       },
       {
-        question: "Where is Book Tour Excursions based?",
+        question: "Where is Excursions Tours Flat based?",
         answer:
           "Our office is at {address}. We organise tours across Agadir, Taghazout, and southern Morocco.",
       },
@@ -59,7 +59,7 @@ export const TOUR_AEO: Record<Locale, TourAeoContent> = {
         answer: "Prévoyez {duration}. L'heure exacte dépend de votre hôtel et de la saison.",
       },
       {
-        question: "Où se trouve Book Tour Excursions ?",
+        question: "Où se trouve Excursions Tours Flat ?",
         answer:
           "Notre bureau est à {address}. Nous organisons des excursions à Agadir, Taghazout et dans le sud du Maroc.",
       },
@@ -85,7 +85,7 @@ export const TOUR_AEO: Record<Locale, TourAeoContent> = {
         answer: "Calcula {duration}. La hora exacta depende de tu hotel y la temporada.",
       },
       {
-        question: "¿Dónde está Book Tour Excursions?",
+        question: "¿Dónde está Excursions Tours Flat?",
         answer:
           "Nuestra oficina está en {address}. Organizamos tours en Agadir, Taghazout y el sur de Marruecos.",
       },
@@ -110,7 +110,7 @@ export const TOUR_AEO: Record<Locale, TourAeoContent> = {
         answer: "خصص {duration}. يعتمد وقت الاستلام على فندقك والموسم.",
       },
       {
-        question: "أين يقع Book Tour Excursions؟",
+        question: "أين يقع Excursions Tours Flat؟",
         answer: "مكتبنا في {address}. ننظم جولات في أكادير وتغازوت وجنوب المغرب.",
       },
     ],
@@ -135,7 +135,7 @@ export const TOUR_AEO: Record<Locale, TourAeoContent> = {
         answer: "Zarezerwuj {duration}. Dokładna godzina zależy od hotelu i sezonu.",
       },
       {
-        question: "Gdzie znajduje się Book Tour Excursions?",
+        question: "Gdzie znajduje się Excursions Tours Flat?",
         answer:
           "Nasze biuro: {address}. Organizujemy wycieczki w Agadir, Taghazout i południowym Maroku.",
       },
@@ -161,7 +161,7 @@ export const TOUR_AEO: Record<Locale, TourAeoContent> = {
         answer: "Planen Sie {duration}. Die genaue Abholzeit hängt von Ihrem Hotel und der Saison ab.",
       },
       {
-        question: "Wo befindet sich Book Tour Excursions?",
+        question: "Wo befindet sich Excursions Tours Flat?",
         answer:
           "Unser Büro: {address}. Wir organisieren Touren in Agadir, Taghazout und Südmarokko.",
       },

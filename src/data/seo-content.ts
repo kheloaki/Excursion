@@ -90,7 +90,7 @@ export const SEO_CONTENT: Record<Locale, SeoContentBlock> = {
       eyebrow: "Agadir & Taghazout",
       title: "Que Faire à Agadir, Maroc",
       intro:
-        "Book Tour Excursions est un opérateur local basé à Agadir, Maroc. Nous organisons des excursions, sorties d'une journée et activités dans la région Souss-Massa — du désert et Paradise Valley à Essaouira, Marrakech et le Parc National Souss-Massa.",
+        "Excursions Tours Flat est un opérateur local basé à Agadir, Maroc. Nous organisons des excursions, sorties d'une journée et activités dans la région Souss-Massa — du désert et Paradise Valley à Essaouira, Marrakech et le Parc National Souss-Massa.",
       sections: [
         {
           heading: "Aventure & désert",
@@ -125,7 +125,7 @@ export const SEO_CONTENT: Record<Locale, SeoContentBlock> = {
         {
           question: "Que faire à Agadir ?",
           answer:
-            "Quad sur la plage, chameaux, Paradise Valley, bateau, sandboard et Souss-Massa figurent parmi les meilleures activités. Book Tour Excursions propose 27+ expériences avec prise en charge hôtel.",
+            "Quad sur la plage, chameaux, Paradise Valley, bateau, sandboard et Souss-Massa figurent parmi les meilleures activités. Excursions Tours Flat propose 27+ expériences avec prise en charge hôtel.",
         },
         {
           question: "Proposez-vous la prise en charge à l'hôtel ?",
@@ -151,7 +151,7 @@ export const SEO_CONTENT: Record<Locale, SeoContentBlock> = {
       eyebrow: "Agadir y Taghazout",
       title: "Qué Hacer en Agadir, Marruecos",
       intro:
-        "Book Tour Excursions es un operador local en Agadir, Marruecos. Organizamos excursiones, viajes de un día y actividades en la región Souss-Massa.",
+        "Excursions Tours Flat es un operador local en Agadir, Marruecos. Organizamos excursiones, viajes de un día y actividades en la región Souss-Massa.",
       sections: [
         { heading: "Aventura y desierto", body: "Quad, buggy, sandboard, camellos y excursiones al desierto con recogida en hotel." },
         { heading: "Excursiones de un día", body: "Paradise Valley, Taroudant, Essaouira, Marrakech y Parque Souss-Massa desde Agadir." },
@@ -186,7 +186,7 @@ export const SEO_CONTENT: Record<Locale, SeoContentBlock> = {
     thingsToDo: {
       eyebrow: "Agadir & Taghazout",
       title: "Aktivitäten in Agadir, Marokko",
-      intro: "Book Tour Excursions ist ein lokaler Reiseveranstalter in Agadir mit Ausflügen in der Region Souss-Massa.",
+      intro: "Excursions Tours Flat ist ein lokaler Reiseveranstalter in Agadir mit Ausflügen in der Region Souss-Massa.",
       sections: [
         { heading: "Abenteuer & Wüste", body: "Quad, Buggy, Sandboarding, Kamelreiten und Wüstenausflüge mit Hotelabholung." },
         { heading: "Tagesausflüge", body: "Paradise Valley, Taroudant, Essaouira, Marrakesch und Souss-Massa Nationalpark." },
@@ -221,7 +221,7 @@ export const SEO_CONTENT: Record<Locale, SeoContentBlock> = {
     thingsToDo: {
       eyebrow: "Agadir i Taghazout",
       title: "Atrakcje Agadir, Maroko",
-      intro: "Book Tour Excursions to lokalny organizator wycieczek w Agadirze z ofertą w regionie Souss-Massa.",
+      intro: "Excursions Tours Flat to lokalny organizator wycieczek w Agadirze z ofertą w regionie Souss-Massa.",
       sections: [
         { heading: "Przygoda i pustynia", body: "Quady, buggy, sandboarding, wielbłądy i wycieczki na pustynię z odbiorem z hotelu." },
         { heading: "Wycieczki jednodniowe", body: "Paradise Valley, Taroudant, Essaouira, Marrakesz i park Souss-Massa." },
@@ -256,7 +256,7 @@ export const SEO_CONTENT: Record<Locale, SeoContentBlock> = {
     thingsToDo: {
       eyebrow: "أكادير وتاغازوت",
       title: "أشياء للقيام بها في أكادير، المغرب",
-      intro: "Book Tour Excursions مشغل رحلات محلي في أكادير يقدم رحلات ونشاطات في منطقة سوس ماسة — من الصحراء ووادي الجنة إلى الصويرة ومراكش والمنتزه الوطني.",
+      intro: "Excursions Tours Flat مشغل رحلات محلي في أكادير يقدم رحلات ونشاطات في منطقة سوس ماسة — من الصحراء ووادي الجنة إلى الصويرة ومراكش والمنتزه الوطني.",
       sections: [
         { heading: "مغامرة وصحراء", body: "دراجات رباعية، باغي، تزلج على الرمال، ركوب الجمال ورحلات صحراوية مع استقبال من الفندق." },
         { heading: "رحلات يومية", body: "وادي الجنة، تارودانت، الصويرة، مراكش ومنتزه سوس ماسة من أكادير." },

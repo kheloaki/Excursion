@@ -2,13 +2,13 @@ import type { DictionaryBase } from "./types";
 
 export const esDictionary: DictionaryBase = {
   meta: {
-    siteName: "Book Tour Excursions",
+    siteName: "Excursions Tours Flat",
     tagline: "Marruecos · Tours y actividades",
-    seoTitle: "Book Tour Excursions | Qué hacer en Marruecos — Tours y actividades",
+    seoTitle: "Excursions Tours Flat | Qué hacer en Marruecos — Tours y actividades",
     seoDescription:
       "Excursiones y tours desde Agadir — desierto, quad, Paradise Valley, Marrakech y Essaouira. Recogida en hotel. Reserva por WhatsApp.",
     keywords: [
-      "Book Tour Excursions",
+      "Excursions Tours Flat",
       "qué hacer Marruecos",
       "qué hacer Agadir",
       "tours Marruecos",
@@ -175,7 +175,7 @@ export const esDictionary: DictionaryBase = {
       title: "Política de privacidad",
       eyebrow: "Legal",
       description:
-        "Cómo Book Tour Excursions recopila y usa tus datos cuando consultas o reservas un tour en Agadir, Marruecos.",
+        "Cómo Excursions Tours Flat recopila y usa tus datos cuando consultas o reservas un tour en Agadir, Marruecos.",
       sections: [
         { title: "Datos que recopilamos", body: "Nombre, email, teléfono y hotel al reservar tours." },
         { title: "Cómo los usamos", body: "Para gestionar reservas, organizar recogidas y mejorar el servicio." },
@@ -185,7 +185,7 @@ export const esDictionary: DictionaryBase = {
     terms: {
       title: "Términos y condiciones",
       eyebrow: "Legal",
-      description: "Condiciones de reserva de tours y traslados con Book Tour Excursions — Agadir, Marruecos.",
+      description: "Condiciones de reserva de tours y traslados con Excursions Tours Flat — Agadir, Marruecos.",
       sections: [
         { title: "Reservas", body: "Sujetas a disponibilidad. Presupuesto por WhatsApp o email." },
         { title: "Cancelación", body: "Cancelación gratuita hasta 24 horas antes de la excursión." },

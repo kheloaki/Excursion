@@ -2,13 +2,13 @@ import type { DictionaryBase } from "./types";
 
 export const plDictionary: DictionaryBase = {
   meta: {
-    siteName: "Book Tour Excursions",
+    siteName: "Excursions Tours Flat",
     tagline: "Maroko · Wycieczki i atrakcje",
-    seoTitle: "Book Tour Excursions | Atrakcje w Maroku — Wycieczki i aktywności",
+    seoTitle: "Excursions Tours Flat | Atrakcje w Maroku — Wycieczki i aktywności",
     seoDescription:
       "Wycieczki jednodniowe z Agadir — pustynia, quady, Paradise Valley, Marrakesz i Essaouira. Odbiór z hotelu. Rezerwacja przez WhatsApp.",
     keywords: [
-      "Book Tour Excursions",
+      "Excursions Tours Flat",
       "atrakcje Maroko",
       "co robić Agadir",
       "wycieczki Maroko",
@@ -175,7 +175,7 @@ export const plDictionary: DictionaryBase = {
       title: "Polityka prywatności",
       eyebrow: "Prawne",
       description:
-        "Jak Book Tour Excursions zbiera i wykorzystuje dane przy zapytaniach i rezerwacjach w Agadir, Maroko.",
+        "Jak Excursions Tours Flat zbiera i wykorzystuje dane przy zapytaniach i rezerwacjach w Agadir, Maroko.",
       sections: [
         { title: "Zbierane dane", body: "Imię, e-mail, telefon i hotel przy rezerwacji wycieczek." },
         { title: "Wykorzystanie", body: "Do obsługi rezerwacji, odbioru i poprawy usług." },
@@ -185,7 +185,7 @@ export const plDictionary: DictionaryBase = {
     terms: {
       title: "Regulamin",
       eyebrow: "Prawne",
-      description: "Warunki rezerwacji wycieczek i transferów z Book Tour Excursions — Agadir, Maroko.",
+      description: "Warunki rezerwacji wycieczek i transferów z Excursions Tours Flat — Agadir, Maroko.",
       sections: [
         { title: "Rezerwacja", body: "W zależności od dostępności. Wycena na życzenie przez WhatsApp lub e-mail." },
         { title: "Anulacja", body: "Bezpłatna anulacja do 24 godzin przed wycieczką." },
