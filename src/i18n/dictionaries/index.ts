@@ -11,7 +11,7 @@ const dictionaries: Record<Locale, DictionaryBase> = {
     meta: {
       siteName: "Excursions Tours Flat",
       tagline: "Morocco · Tours & Activities",
-      seoTitle: "Excursions Tours Flat | Things to Do in Morocco — Tours & Activities",
+      seoTitle: "Morocco Tours & Activities",
       seoDescription:
         "Day trips and tours from Agadir — desert, quad, Paradise Valley, Marrakech & Essaouira. Pickup from your hotel. Book on WhatsApp.",
       keywords: [
@@ -258,7 +258,7 @@ const dictionaries: Record<Locale, DictionaryBase> = {
     meta: {
       siteName: "Excursions Tours Flat",
       tagline: "Agadir · Maroc",
-      seoTitle: "Excursions Tours Flat Agadir | Que Faire à Agadir & Taghazout",
+      seoTitle: "Excursions Agadir & Taghazout",
       seoDescription:
         "Réservez des excursions à Agadir avec Excursions Tours Flat. Désert, quad, Paradise Valley, Marrakech et Essaouira. Prise en charge hôtel, réservation WhatsApp.",
       keywords: [
@@ -506,7 +506,7 @@ const dictionaries: Record<Locale, DictionaryBase> = {
     meta: {
       siteName: "Excursions Tours Flat",
       tagline: "أكادير · المغرب",
-      seoTitle: "Excursions Tours Flat أكادير | أشياء للقيام بها في أكادير وتاغازوت",
+      seoTitle: "جولات أكادير وتاغازوت",
       seoDescription:
         "احجز رحلات من أكادير مع Excursions Tours Flat. صحراء، كواد، وادي الجنة، مراكش والصويرة. استقبال من الفندق وحجز عبر واتساب.",
       keywords: [

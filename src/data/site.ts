@@ -32,8 +32,7 @@ export const SITE = {
   },
   description:
     "Excursions Tours Flat — day trips and activities from Agadir and Taghazout. Desert, coast, Atlas day trips, transfers.",
-  seoTitle:
-    "Excursions Tours Flat | Things to Do in Morocco — Tours & Activities",
+  seoTitle: "Morocco Tours & Activities",
   seoDescription:
     "Tours and day trips from Agadir with Excursions Tours Flat. Desert, quad, Paradise Valley, Marrakech and Essaouira. Hotel pickup. WhatsApp booking.",
   heroImage: SITE_IMAGES.hero,

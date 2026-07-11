@@ -12,7 +12,7 @@ import { buildServicesIndexAlternates, getLocalizedServicePath, getServicesIndex
 import { buildServicesIndexJsonLd } from "@/lib/seo";
 import { buildPageMetadata } from "@/lib/metadata";
 import { absoluteCanonical } from "@/lib/canonical";
-import { clampMetaDescription, formatSeoTitle, resolveStaticPageMeta } from "@/lib/seo-text";
+import { clampMetaDescription, resolveStaticPageMeta } from "@/lib/seo-text";
 import { imageAltFromSrc, siteHeroAlt } from "@/lib/image-metadata";
 
 interface Props {
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return buildPageMetadata({
     locale,
-    title: formatSeoTitle(pageMeta.title),
+    title: pageMeta.title,
     description: clampMetaDescription(pageMeta.description),
     keywords: dict.meta.keywords,
     canonicalUrl,

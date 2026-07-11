@@ -4,7 +4,7 @@ export const esDictionary: DictionaryBase = {
   meta: {
     siteName: "Excursions Tours Flat",
     tagline: "Marruecos · Tours y actividades",
-    seoTitle: "Excursions Tours Flat | Qué hacer en Marruecos — Tours y actividades",
+    seoTitle: "Tours y Actividades en Marruecos",
     seoDescription:
       "Excursiones y tours desde Agadir — desierto, quad, Paradise Valley, Marrakech y Essaouira. Recogida en hotel. Reserva por WhatsApp.",
     keywords: [

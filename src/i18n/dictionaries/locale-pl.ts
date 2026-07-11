@@ -4,7 +4,7 @@ export const plDictionary: DictionaryBase = {
   meta: {
     siteName: "Excursions Tours Flat",
     tagline: "Maroko · Wycieczki i atrakcje",
-    seoTitle: "Excursions Tours Flat | Atrakcje w Maroku — Wycieczki i aktywności",
+    seoTitle: "Wycieczki i Atrakcje w Maroku",
     seoDescription:
       "Wycieczki jednodniowe z Agadir — pustynia, quady, Paradise Valley, Marrakesz i Essaouira. Odbiór z hotelu. Rezerwacja przez WhatsApp.",
     keywords: [

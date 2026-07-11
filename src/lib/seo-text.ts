@@ -27,19 +27,43 @@ export function clampMetaDescription(text: string, maxLength = MAX_DESCRIPTION):
   return `${trimmed}…`;
 }
 
-export function formatSeoTitle(title: string, siteName: string = SITE.name): string {
-  const normalized = title.trim();
-  if (normalized.includes(siteName)) {
-    return normalized.length <= MAX_TITLE ? normalized : `${normalized.slice(0, MAX_TITLE - 1).trim()}…`;
+function stripBrandFromTitle(title: string, siteName: string): string {
+  const parts = title
+    .split("|")
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  const withoutBrand = parts.filter((part) => {
+    const lower = part.toLowerCase();
+    const brand = siteName.toLowerCase();
+    return lower !== brand && !lower.startsWith(`${brand} `) && !lower.endsWith(` ${brand}`);
+  });
+
+  if (withoutBrand.length > 0) {
+    return withoutBrand[0]!;
   }
 
-  const suffix = ` | ${siteName}`;
-  const available = MAX_TITLE - suffix.length;
-  if (available < 10) return normalized.slice(0, MAX_TITLE);
+  return parts[0]?.replace(siteName, "").replace(/\s+/g, " ").trim() || title.trim();
+}
 
-  const base = normalized.split("|")[0]?.trim() || normalized;
-  if (base.length <= available) return `${base}${suffix}`;
-  return `${base.slice(0, available - 1).trim()}…${suffix}`;
+function truncateAtWord(text: string, maxLength: number): string {
+  if (text.length <= maxLength) return text;
+  const slice = text.slice(0, maxLength - 1);
+  const lastSpace = slice.lastIndexOf(" ");
+  return `${(lastSpace > maxLength * 0.5 ? slice.slice(0, lastSpace) : slice).trim()}…`;
+}
+
+/** Build a single SEO title ≤60 chars: "{page} | {siteName}". */
+export function formatSeoTitle(title: string, siteName: string = SITE.name): string {
+  const primary = stripBrandFromTitle(title, siteName);
+  const suffix = ` | ${siteName}`;
+  const maxPrimary = MAX_TITLE - suffix.length;
+
+  if (maxPrimary < 8) {
+    return truncateAtWord(primary, MAX_TITLE);
+  }
+
+  return `${truncateAtWord(primary, maxPrimary)}${suffix}`;
 }
 
 export function resolveTourSeoMeta(tour: {
@@ -48,12 +72,10 @@ export function resolveTourSeoMeta(tour: {
   metaDescription: string;
   description: string;
 }): { title: string; description: string } {
-  const description = clampMetaDescription(tour.metaDescription || tour.description);
-  const title = formatSeoTitle(
-    tour.metaTitle.includes(SITE.name) ? tour.metaTitle : `${tour.title} | Excursions Tours Flat Agadir`
-  );
-
-  return { title, description };
+  return {
+    title: formatSeoTitle(tour.metaTitle || tour.title),
+    description: clampMetaDescription(tour.metaDescription || tour.description),
+  };
 }
 
 export function resolveStaticPageMeta(

@@ -45,7 +45,7 @@ export function buildPageMetadata({
   const canonical = absoluteCanonical(canonicalUrl.startsWith("http") ? new URL(canonicalUrl).pathname : canonicalUrl);
 
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords,
     authors: [{ name: SITE.name, url: SITE.domain }],
