@@ -6,6 +6,7 @@ import type { Tour } from "@/data/tours";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { tourPublicPath } from "@/i18n/routing";
 import { formatRating } from "@/lib/utils";
+import { tourHeroAlt } from "@/lib/image-metadata";
 
 const CATEGORY_BADGE: Record<Tour["category"], string> = {
   agadir: "Agadir",
@@ -32,7 +33,7 @@ export default function TourCard({
       <div className="relative aspect-[4/3] overflow-hidden">
         <Image
           src={tour.image}
-          alt={tour.title}
+          alt={tourHeroAlt(tour.title, tour.image)}
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-110"
           sizes="(max-width: 768px) 100vw, 33vw"

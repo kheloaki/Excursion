@@ -41,6 +41,15 @@ const serviceRewrites = [
   { source: "/de/leistungen", destination: "/de/services" },
 ];
 
+const sitemapRewrites = [
+  { source: "/sitemap-pages-en.xml", destination: "/sitemap-pages/en" },
+  { source: "/sitemap-pages-fr.xml", destination: "/sitemap-pages/fr" },
+  { source: "/sitemap-pages-es.xml", destination: "/sitemap-pages/es" },
+  { source: "/sitemap-pages-ar.xml", destination: "/sitemap-pages/ar" },
+  { source: "/sitemap-pages-pl.xml", destination: "/sitemap-pages/pl" },
+  { source: "/sitemap-pages-de.xml", destination: "/sitemap-pages/de" },
+];
+
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
@@ -51,7 +60,7 @@ const nextConfig: NextConfig = {
     ],
   },
   async rewrites() {
-    return [...tourRewrites, ...pageRewrites, ...serviceRewrites];
+    return [...tourRewrites, ...pageRewrites, ...serviceRewrites, ...sitemapRewrites];
   },
 };
 

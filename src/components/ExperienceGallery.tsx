@@ -4,6 +4,7 @@ import Image from "next/image";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { ALL_EXPERIENCE_IMAGES } from "@/data/tour-images";
 import { useLocale } from "@/i18n/LocaleProvider";
+import { imageAltFromSrc } from "@/lib/image-metadata";
 
 export default function ExperienceGallery() {
   const { dict } = useLocale();
@@ -24,7 +25,7 @@ export default function ExperienceGallery() {
             >
               <Image
                 src={src}
-                alt={`${dict.meta.siteName} — ${dict.gallery.imageAlt} ${i + 1}`}
+                alt={imageAltFromSrc(src, dict.meta.siteName)}
                 width={600}
                 height={i % 3 === 0 ? 750 : 450}
                 className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"

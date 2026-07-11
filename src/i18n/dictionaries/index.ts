@@ -259,7 +259,8 @@ const dictionaries: Record<Locale, DictionaryBase> = {
       siteName: "Excursions Tours Flat",
       tagline: "Agadir · Maroc",
       seoTitle: "Excursions Tours Flat Agadir | Que Faire à Agadir & Taghazout",
-      seoDescription: "Réservez des excursions inoubliables à Agadir avec Excursions Tours Flat. Désert, quad, Paradise Valley, Marrakech. Avis 5 étoiles.",
+      seoDescription:
+        "Réservez des excursions à Agadir avec Excursions Tours Flat. Désert, quad, Paradise Valley, Marrakech et Essaouira. Prise en charge hôtel, réservation WhatsApp.",
       keywords: [
         "Excursions Tours Flat Agadir",
         "que faire Agadir",
@@ -506,7 +507,8 @@ const dictionaries: Record<Locale, DictionaryBase> = {
       siteName: "Excursions Tours Flat",
       tagline: "أكادير · المغرب",
       seoTitle: "Excursions Tours Flat أكادير | أشياء للقيام بها في أكادير وتاغازوت",
-      seoDescription: "احجز رحلات لا تُنسى في أكادير. صحراء، كواد، وادي الجنة، مراكش. تقييم 5 نجوم.",
+      seoDescription:
+        "احجز رحلات من أكادير مع Excursions Tours Flat. صحراء، كواد، وادي الجنة، مراكش والصويرة. استقبال من الفندق وحجز عبر واتساب.",
       keywords: [
         "Excursions Tours Flat أكادير",
         "أشياء للقيام بها أكادير",

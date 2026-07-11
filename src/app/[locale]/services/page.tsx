@@ -4,14 +4,16 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import PageHeader from "@/components/ui/PageHeader";
 import JsonLd from "@/components/JsonLd";
-import { isValidLocale, type Locale } from "@/i18n/config";
+import { isValidLocale, locales, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { SITE, SERVICE_CATEGORIES } from "@/data/site";
 import { getServicesSeo } from "@/data/services-seo";
 import { buildServicesIndexAlternates, getLocalizedServicePath, getServicesIndexPath } from "@/data/services-routing";
 import { buildServicesIndexJsonLd } from "@/lib/seo";
 import { buildPageMetadata } from "@/lib/metadata";
-import { locales } from "@/i18n/config";
+import { absoluteCanonical } from "@/lib/canonical";
+import { clampMetaDescription, formatSeoTitle, resolveStaticPageMeta } from "@/lib/seo-text";
+import { imageAltFromSrc, siteHeroAlt } from "@/lib/image-metadata";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -27,16 +29,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const locale = localeParam as Locale;
   const dict = getDictionary(locale);
   const seo = getServicesSeo(locale);
-  const canonicalUrl = `${SITE.domain}${getServicesIndexPath(locale)}`;
+  const canonicalUrl = absoluteCanonical(getServicesIndexPath(locale));
+  const pageMeta = resolveStaticPageMeta(seo.contentTitle, seo.intro);
 
   return buildPageMetadata({
     locale,
-    title: seo.contentTitle,
-    description: seo.intro.slice(0, 160),
+    title: formatSeoTitle(pageMeta.title),
+    description: clampMetaDescription(pageMeta.description),
     keywords: dict.meta.keywords,
     canonicalUrl,
     alternateLanguages: buildServicesIndexAlternates(),
     image: SITE.heroImage,
+    imageAlt: siteHeroAlt(dict.meta.siteName),
   });
 }
 
@@ -77,7 +81,7 @@ export default async function ServicesIndexPage({ params }: Props) {
                   <div className="relative aspect-[16/10] overflow-hidden">
                     <Image
                       src={cat.image}
-                      alt={content.heading}
+                      alt={imageAltFromSrc(cat.image, content.heading)}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 33vw"

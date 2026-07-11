@@ -15,6 +15,9 @@ import { SITE } from "@/data/site";
 import JsonLd from "@/components/JsonLd";
 import { buildTourPageJsonLd, buildBreadcrumbJsonLd } from "@/lib/seo";
 import { buildPageMetadata } from "@/lib/metadata";
+import { absoluteCanonical } from "@/lib/canonical";
+import { resolveTourSeoMeta } from "@/lib/seo-text";
+import { tourHeroAlt } from "@/lib/image-metadata";
 
 interface Props {
   params: Promise<{ locale: string; slug: string }>;
@@ -34,16 +37,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const tour = getTourBySlug(locale, slug);
   if (!tour) return {};
 
-  const canonicalUrl = `${SITE.domain}${tourPublicPath(locale, slug)}`;
+  const canonicalUrl = absoluteCanonical(tourPublicPath(locale, slug));
+  const seo = resolveTourSeoMeta(tour);
 
   return buildPageMetadata({
     locale,
-    title: tour.metaTitle,
-    description: tour.metaDescription,
+    title: seo.title,
+    description: seo.description,
     keywords: tour.keywords,
     canonicalUrl,
     alternateLanguages: buildTourAlternates(tour.id),
     image: tour.image,
+    imageAlt: tourHeroAlt(tour.title, tour.image),
     imageWidth: 800,
     imageHeight: 600,
   });
@@ -77,7 +82,7 @@ export default async function TourPage({ params }: Props) {
       <header className="relative h-[40vh] md:h-[50vh] min-h-[280px] grain">
         <Image
           src={tour.image}
-          alt={tour.title}
+          alt={tourHeroAlt(tour.title, tour.image)}
           fill
           className="object-cover"
           priority

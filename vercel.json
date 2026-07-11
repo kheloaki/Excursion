@@ -1,0 +1,12 @@
+{
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "booktourexcursions.com" }],
+      "destination": "https://www.booktourexcursions.com/:path*",
+      "permanent": true
+    }
+  ]
+}

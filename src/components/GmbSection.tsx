@@ -48,11 +48,7 @@ export default function GmbSection() {
                 <p className="text-gold text-xs font-semibold uppercase tracking-widest mb-2">
                   {gmb.hoursLabel}
                 </p>
-                <ul className="text-cream-muted space-y-1">
-                  <li>{gmb.hoursWeekdays}</li>
-                  <li>{gmb.hoursSaturday}</li>
-                  <li>{gmb.hoursSunday}</li>
-                </ul>
+                <p className="text-cream-muted">{gmb.hoursDaily}</p>
               </div>
             </div>
 

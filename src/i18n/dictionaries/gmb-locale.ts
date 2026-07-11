@@ -7,9 +7,7 @@ export interface GmbContent {
   addressLabel: string;
   phoneLabel: string;
   hoursLabel: string;
-  hoursWeekdays: string;
-  hoursSaturday: string;
-  hoursSunday: string;
+  hoursDaily: string;
   directions: string;
   viewOnGoogle: string;
   leaveReview: string;
@@ -25,9 +23,7 @@ export const GMB_LOCALE: Record<Locale, GmbContent> = {
     addressLabel: "Address",
     phoneLabel: "Phone",
     hoursLabel: "Opening hours",
-    hoursWeekdays: "Mon–Fri: 8:00 – 22:00",
-    hoursSaturday: "Sat: 8:00 – 22:00",
-    hoursSunday: "Sun: 9:00 – 20:00",
+    hoursDaily: "Daily: 8:00 AM – 10:00 PM",
     directions: "Get directions",
     viewOnGoogle: "View on Google",
     leaveReview: "Leave a Google review",
@@ -41,9 +37,7 @@ export const GMB_LOCALE: Record<Locale, GmbContent> = {
     addressLabel: "Adresse",
     phoneLabel: "Téléphone",
     hoursLabel: "Horaires",
-    hoursWeekdays: "Lun–ven : 8h – 22h",
-    hoursSaturday: "Sam : 8h – 22h",
-    hoursSunday: "Dim : 9h – 20h",
+    hoursDaily: "Tous les jours : 8h – 22h",
     directions: "Itinéraire",
     viewOnGoogle: "Voir sur Google",
     leaveReview: "Laisser un avis Google",
@@ -57,9 +51,7 @@ export const GMB_LOCALE: Record<Locale, GmbContent> = {
     addressLabel: "Dirección",
     phoneLabel: "Teléfono",
     hoursLabel: "Horario",
-    hoursWeekdays: "Lun–vie: 8:00 – 22:00",
-    hoursSaturday: "Sáb: 8:00 – 22:00",
-    hoursSunday: "Dom: 9:00 – 20:00",
+    hoursDaily: "Todos los días: 8:00 – 22:00",
     directions: "Cómo llegar",
     viewOnGoogle: "Ver en Google",
     leaveReview: "Dejar reseña en Google",
@@ -73,9 +65,7 @@ export const GMB_LOCALE: Record<Locale, GmbContent> = {
     addressLabel: "Adresse",
     phoneLabel: "Telefon",
     hoursLabel: "Öffnungszeiten",
-    hoursWeekdays: "Mo–Fr: 8:00 – 22:00",
-    hoursSaturday: "Sa: 8:00 – 22:00",
-    hoursSunday: "So: 9:00 – 20:00",
+    hoursDaily: "Täglich: 8:00 – 22:00",
     directions: "Route planen",
     viewOnGoogle: "Auf Google ansehen",
     leaveReview: "Google-Bewertung schreiben",
@@ -89,9 +79,7 @@ export const GMB_LOCALE: Record<Locale, GmbContent> = {
     addressLabel: "Adres",
     phoneLabel: "Telefon",
     hoursLabel: "Godziny otwarcia",
-    hoursWeekdays: "Pn–pt: 8:00 – 22:00",
-    hoursSaturday: "Sob: 8:00 – 22:00",
-    hoursSunday: "Ndz: 9:00 – 20:00",
+    hoursDaily: "Codziennie: 8:00 – 22:00",
     directions: "Wskazówki dojazdu",
     viewOnGoogle: "Zobacz w Google",
     leaveReview: "Dodaj opinię w Google",
@@ -105,9 +93,7 @@ export const GMB_LOCALE: Record<Locale, GmbContent> = {
     addressLabel: "العنوان",
     phoneLabel: "الهاتف",
     hoursLabel: "ساعات العمل",
-    hoursWeekdays: "الإثنين–الجمعة: 8:00 – 22:00",
-    hoursSaturday: "السبت: 8:00 – 22:00",
-    hoursSunday: "الأحد: 9:00 – 20:00",
+    hoursDaily: "يومياً: 8:00 ص – 10:00 م",
     directions: "الاتجاهات",
     viewOnGoogle: "عرض على Google",
     leaveReview: "اترك تقييماً على Google",

@@ -7,6 +7,7 @@ import { getServicesSeo } from "@/data/services-seo";
 import { getLocalizedServicePath } from "@/data/services-routing";
 import { useLocale } from "@/i18n/LocaleProvider";
 import SectionHeader from "@/components/ui/SectionHeader";
+import { imageAltFromSrc } from "@/lib/image-metadata";
 
 export default function ServiceCards() {
   const { locale, dict } = useLocale();
@@ -32,7 +33,7 @@ export default function ServiceCards() {
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image
                     src={cat.image}
-                    alt={labels.title}
+                    alt={imageAltFromSrc(cat.image, labels.title)}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, 25vw"

@@ -1,6 +1,7 @@
 import type { Locale } from "@/i18n/config";
 import { defaultLocale, locales } from "@/i18n/config";
-import { SITE, SERVICE_CATEGORIES, type ServiceCategoryId } from "./site";
+import { absoluteCanonical } from "@/lib/canonical";
+import { SERVICE_CATEGORIES, type ServiceCategoryId } from "./site";
 
 export const serviceSegment: Record<Locale, string> = {
   en: "services",
@@ -104,18 +105,18 @@ export function getServicesIndexPath(locale: Locale): string {
 export function buildServiceAlternates(serviceId: ServiceCategoryId): Record<string, string> {
   const alternates: Record<string, string> = {};
   for (const locale of locales) {
-    alternates[locale] = `${SITE.domain}${getLocalizedServicePath(locale, serviceId)}`;
+    alternates[locale] = absoluteCanonical(getLocalizedServicePath(locale, serviceId));
   }
-  alternates["x-default"] = `${SITE.domain}${getLocalizedServicePath(defaultLocale, serviceId)}`;
+  alternates["x-default"] = absoluteCanonical(getLocalizedServicePath(defaultLocale, serviceId));
   return alternates;
 }
 
 export function buildServicesIndexAlternates(): Record<string, string> {
   const alternates: Record<string, string> = {};
   for (const locale of locales) {
-    alternates[locale] = `${SITE.domain}${getServicesIndexPath(locale)}`;
+    alternates[locale] = absoluteCanonical(getServicesIndexPath(locale));
   }
-  alternates["x-default"] = `${SITE.domain}${getServicesIndexPath(defaultLocale)}`;
+  alternates["x-default"] = absoluteCanonical(getServicesIndexPath(defaultLocale));
   return alternates;
 }
 

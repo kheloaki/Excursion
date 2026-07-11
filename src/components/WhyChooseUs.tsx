@@ -4,6 +4,7 @@ import Image from "next/image";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { SITE } from "@/data/site";
 import { useLocale } from "@/i18n/LocaleProvider";
+import { fleetImageAlt } from "@/lib/image-metadata";
 
 const icons = ["✦", "◎", "◈", "★"];
 
@@ -22,7 +23,7 @@ export default function WhyChooseUs() {
           <div className="relative aspect-[4/3] overflow-hidden rounded-sm border border-border">
             <Image
               src={SITE.fleetImage}
-              alt={`${dict.meta.siteName} — premium transport fleet Agadir`}
+              alt={fleetImageAlt(dict.meta.siteName)}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"

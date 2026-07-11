@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SITE } from "@/data/site";
 import { ogLocales, type Locale } from "@/i18n/config";
+import { absoluteCanonical } from "@/lib/canonical";
 
 export function geoMetaTags(): Record<string, string> {
   return {
@@ -19,6 +20,7 @@ export interface PageMetadataOptions {
   alternateLanguages?: Record<string, string>;
   keywords?: string[];
   image?: string;
+  imageAlt?: string;
   imageWidth?: number;
   imageHeight?: number;
   ogType?: "website" | "article";
@@ -33,12 +35,14 @@ export function buildPageMetadata({
   alternateLanguages,
   keywords,
   image = SITE.heroImage,
+  imageAlt = title,
   imageWidth = 1200,
   imageHeight = 630,
   ogType = "website",
   robots = { index: true, follow: true },
 }: PageMetadataOptions): Metadata {
   const imageUrl = image.startsWith("http") ? image : `${SITE.domain}${image}`;
+  const canonical = absoluteCanonical(canonicalUrl.startsWith("http") ? new URL(canonicalUrl).pathname : canonicalUrl);
 
   return {
     title,
@@ -51,20 +55,20 @@ export function buildPageMetadata({
     openGraph: {
       title,
       description,
-      url: canonicalUrl,
+      url: canonical,
       siteName: SITE.name,
       locale: ogLocales[locale],
       type: ogType,
-      images: [{ url: imageUrl, width: imageWidth, height: imageHeight, alt: title }],
+      images: [{ url: imageUrl, width: imageWidth, height: imageHeight, alt: imageAlt }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [imageUrl],
+      images: { url: imageUrl, alt: imageAlt },
     },
     alternates: {
-      canonical: canonicalUrl,
+      canonical,
       ...(alternateLanguages ? { languages: alternateLanguages } : {}),
     },
     robots: {

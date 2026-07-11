@@ -4,7 +4,7 @@ import type { TourId } from "./tours/types";
 export const SITE = {
   name: "Excursions Tours Flat",
   tagline: "Morocco Tours & Excursions",
-  domain: "https://booktourexcursions.com",
+  domain: "https://www.booktourexcursions.com",
   email: "info@booktourexcursions.com",
   phone: "+212618778871",
   phoneDisplay: "+212 6 18 77 88 71",
@@ -35,7 +35,7 @@ export const SITE = {
   seoTitle:
     "Excursions Tours Flat | Things to Do in Morocco — Tours & Activities",
   seoDescription:
-    "Book tours and excursions across Morocco with Excursions Tours Flat. Desert trips, quad biking, Paradise Valley, Marrakech & Essaouira day trips, camel rides, boat tours. WhatsApp booking from Agadir.",
+    "Tours and day trips from Agadir with Excursions Tours Flat. Desert, quad, Paradise Valley, Marrakech and Essaouira. Hotel pickup. WhatsApp booking.",
   heroImage: SITE_IMAGES.hero,
   fleetImage: SITE_IMAGES.fleet,
   logoText: "EXCURSIONS TOURS FLAT",
@@ -59,9 +59,8 @@ export const SITE = {
     "Merzouga",
   ],
   openingHours: {
-    weekdays: { opens: "08:00", closes: "22:00" },
-    saturday: { opens: "08:00", closes: "22:00" },
-    sunday: { opens: "09:00", closes: "20:00" },
+    opens: "08:00",
+    closes: "22:00",
   },
 } as const;
 

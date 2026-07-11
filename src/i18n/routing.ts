@@ -1,9 +1,16 @@
 import type { Locale } from "./config";
 import { locales, defaultLocale } from "./config";
-import { SITE } from "@/data/site";
+import { absoluteCanonical } from "@/lib/canonical";
 import { getLocalizedTourPath, getTourIdFromSlug } from "@/data/tours";
 
 type StaticPage = "about" | "contact" | "privacy-policy" | "terms-and-conditions";
+
+export const STATIC_PAGES: StaticPage[] = [
+  "about",
+  "contact",
+  "privacy-policy",
+  "terms-and-conditions",
+];
 
 const PAGE_SLUGS: Record<Locale, Record<StaticPage, string>> = {
   en: {
@@ -50,7 +57,7 @@ export function localizedPath(locale: Locale, path: string = ""): string {
 }
 
 export function absoluteUrl(locale: Locale, path: string = ""): string {
-  return `${SITE.domain}${localizedPath(locale, path)}`;
+  return absoluteCanonical(localizedPath(locale, path));
 }
 
 export function pagePath(locale: Locale, page: StaticPage): string {
@@ -75,18 +82,18 @@ export function buildAlternateLanguages(
 ): Record<string, string> {
   const alternates: Record<string, string> = {};
   for (const locale of locales) {
-    alternates[locale] = `${SITE.domain}${getPath(locale)}`;
+    alternates[locale] = absoluteCanonical(getPath(locale));
   }
-  alternates["x-default"] = `${SITE.domain}${getPath(defaultLocale)}`;
+  alternates["x-default"] = absoluteCanonical(getPath(defaultLocale));
   return alternates;
 }
 
 export function buildTourAlternates(tourId: import("@/data/tours").TourId): Record<string, string> {
   const alternates: Record<string, string> = {};
   for (const locale of locales) {
-    alternates[locale] = `${SITE.domain}${getLocalizedTourPath(locale, tourId)}`;
+    alternates[locale] = absoluteCanonical(getLocalizedTourPath(locale, tourId));
   }
-  alternates["x-default"] = `${SITE.domain}${getLocalizedTourPath(defaultLocale, tourId)}`;
+  alternates["x-default"] = absoluteCanonical(getLocalizedTourPath(defaultLocale, tourId));
   return alternates;
 }
 

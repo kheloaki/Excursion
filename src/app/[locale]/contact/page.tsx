@@ -10,6 +10,8 @@ import { buildAlternateLanguages, pagePath } from "@/i18n/routing";
 import { SITE } from "@/data/site";
 import { buildContactPageJsonLd, pageBreadcrumbs } from "@/lib/seo";
 import { buildPageMetadata } from "@/lib/metadata";
+import { absoluteCanonical } from "@/lib/canonical";
+import { resolveStaticPageMeta } from "@/lib/seo-text";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -20,12 +22,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!isValidLocale(localeParam)) return {};
   const locale = localeParam as Locale;
   const dict = getDictionary(locale);
-  const canonicalUrl = `${SITE.domain}${pagePath(locale, "contact")}`;
+  const canonicalUrl = absoluteCanonical(pagePath(locale, "contact"));
+
+  const pageMeta = resolveStaticPageMeta(dict.pages.contact.title, dict.pages.contact.description);
 
   return buildPageMetadata({
     locale,
-    title: dict.pages.contact.title,
-    description: dict.pages.contact.description,
+    title: pageMeta.title,
+    description: pageMeta.description,
     keywords: [...dict.meta.keywords, "contact Agadir tours", SITE.address.formatted],
     canonicalUrl,
     alternateLanguages: buildAlternateLanguages((l) => pagePath(l, "contact")),

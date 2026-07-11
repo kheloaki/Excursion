@@ -8,6 +8,8 @@ import JsonLd from "@/components/JsonLd";
 import { SITE } from "@/data/site";
 import { buildLocalBusinessJsonLd, buildWebPageJsonLd, pageBreadcrumbs } from "@/lib/seo";
 import { buildPageMetadata, metaDescriptionFromSections } from "@/lib/metadata";
+import { absoluteCanonical } from "@/lib/canonical";
+import { formatSeoTitle, clampMetaDescription } from "@/lib/seo-text";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -19,12 +21,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const locale = localeParam as Locale;
   const dict = getDictionary(locale);
   const page = dict.pages.terms;
-  const canonicalUrl = `${SITE.domain}${pagePath(locale, "terms-and-conditions")}`;
+  const canonicalUrl = absoluteCanonical(pagePath(locale, "terms-and-conditions"));
 
   return buildPageMetadata({
     locale,
-    title: page.title,
-    description: metaDescriptionFromSections(page.description, page.sections),
+    title: formatSeoTitle(page.title),
+    description: clampMetaDescription(metaDescriptionFromSections(page.description, page.sections)),
     canonicalUrl,
     alternateLanguages: buildAlternateLanguages((l) => pagePath(l, "terms-and-conditions")),
     robots: { index: true, follow: true },

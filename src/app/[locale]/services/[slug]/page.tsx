@@ -21,6 +21,9 @@ import {
 import { getTourById } from "@/data/tours";
 import { buildBreadcrumbJsonLd, buildServicePageJsonLd } from "@/lib/seo";
 import { buildPageMetadata } from "@/lib/metadata";
+import { absoluteCanonical } from "@/lib/canonical";
+import { clampMetaDescription, formatSeoTitle } from "@/lib/seo-text";
+import { imageAltFromSrc } from "@/lib/image-metadata";
 import { getHomePath, tourPublicPath } from "@/i18n/routing";
 
 interface Props {
@@ -40,16 +43,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const meta = getServicePageMeta(locale, serviceId);
   const category = getServiceCategory(serviceId);
-  const canonicalUrl = `${SITE.domain}${getLocalizedServicePath(locale, serviceId)}`;
+  const canonicalUrl = absoluteCanonical(getLocalizedServicePath(locale, serviceId));
 
   return buildPageMetadata({
     locale,
-    title: meta.title,
-    description: meta.description,
+    title: formatSeoTitle(meta.title),
+    description: clampMetaDescription(meta.description),
     keywords: meta.keywords,
     canonicalUrl,
     alternateLanguages: buildServiceAlternates(serviceId),
     image: category?.image ?? SITE.heroImage,
+    imageAlt: imageAltFromSrc(category?.image ?? SITE.heroImage, meta.title),
     imageWidth: 1200,
     imageHeight: 630,
   });
@@ -100,7 +104,7 @@ export default async function ServicePage({ params }: Props) {
       <header className="relative h-[36vh] md:h-[44vh] min-h-[260px] grain">
         <Image
           src={category.image}
-          alt={content.heading}
+          alt={imageAltFromSrc(category?.image ?? SITE.heroImage, content.heading)}
           fill
           className="object-cover"
           priority

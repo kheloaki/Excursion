@@ -4,6 +4,7 @@ import Image from "next/image";
 import { SITE } from "@/data/site";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { getHomePath, pagePath } from "@/i18n/routing";
+import { siteHeroAlt } from "@/lib/image-metadata";
 import Button from "@/components/ui/Button";
 
 export default function Hero() {
@@ -13,7 +14,7 @@ export default function Hero() {
     <section className="relative min-h-[90vh] flex items-end overflow-hidden grain">
       <Image
         src={SITE.heroImage}
-        alt={dict.meta.seoTitle}
+        alt={siteHeroAlt(dict.meta.siteName)}
         fill
         className="object-cover scale-105"
         priority

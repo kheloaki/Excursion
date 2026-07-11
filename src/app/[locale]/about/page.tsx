@@ -9,6 +9,9 @@ import { buildAlternateLanguages, pagePath } from "@/i18n/routing";
 import { SITE } from "@/data/site";
 import { buildAboutPageJsonLd, pageBreadcrumbs } from "@/lib/seo";
 import { buildPageMetadata } from "@/lib/metadata";
+import { absoluteCanonical } from "@/lib/canonical";
+import { resolveStaticPageMeta } from "@/lib/seo-text";
+import { siteHeroAlt } from "@/lib/image-metadata";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -19,15 +22,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!isValidLocale(localeParam)) return {};
   const locale = localeParam as Locale;
   const dict = getDictionary(locale);
-  const canonicalUrl = `${SITE.domain}${pagePath(locale, "about")}`;
+  const canonicalUrl = absoluteCanonical(pagePath(locale, "about"));
+
+  const pageMeta = resolveStaticPageMeta(
+    dict.pages.about.title,
+    dict.pages.about.description,
+    dict.pages.about.sections.map((s) => s.content).join(" ")
+  );
 
   return buildPageMetadata({
     locale,
-    title: dict.pages.about.title,
-    description: dict.pages.about.description,
+    title: pageMeta.title,
+    description: pageMeta.description,
     keywords: dict.meta.keywords,
     canonicalUrl,
     alternateLanguages: buildAlternateLanguages((l) => pagePath(l, "about")),
+    image: SITE.heroImage,
+    imageAlt: siteHeroAlt(dict.meta.siteName),
   });
 }
 

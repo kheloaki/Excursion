@@ -20,6 +20,9 @@ import { getLocalizedServicePath } from "@/data/services-routing";
 import { getTours } from "@/data/tours";
 import { buildHomePageJsonLd } from "@/lib/seo";
 import { buildPageMetadata } from "@/lib/metadata";
+import { absoluteCanonical } from "@/lib/canonical";
+import { clampMetaDescription, formatSeoTitle } from "@/lib/seo-text";
+import { siteHeroAlt } from "@/lib/image-metadata";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -30,16 +33,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!isValidLocale(localeParam)) return {};
   const locale = localeParam as Locale;
   const dict = getDictionary(locale);
-  const canonicalUrl = `${SITE.domain}${getHomePath(locale)}`;
+  const canonicalUrl = absoluteCanonical(getHomePath(locale));
 
   return buildPageMetadata({
     locale,
-    title: dict.meta.seoTitle,
-    description: dict.meta.seoDescription,
+    title: formatSeoTitle(dict.meta.seoTitle),
+    description: clampMetaDescription(dict.meta.seoDescription),
     keywords: dict.meta.keywords,
     canonicalUrl,
     alternateLanguages: buildAlternateLanguages((l) => getHomePath(l)),
     image: SITE.heroImage,
+    imageAlt: siteHeroAlt(dict.meta.siteName),
     imageWidth: 1600,
     imageHeight: 900,
   });

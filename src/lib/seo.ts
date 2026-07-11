@@ -24,25 +24,21 @@ function localGeo() {
 }
 
 function openingHoursSpec() {
-  const { weekdays, saturday, sunday } = SITE.openingHours;
+  const { opens, closes } = SITE.openingHours;
   return [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: weekdays.opens,
-      closes: weekdays.closes,
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Saturday",
-      opens: saturday.opens,
-      closes: saturday.closes,
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Sunday",
-      opens: sunday.opens,
-      closes: sunday.closes,
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+      opens,
+      closes,
     },
   ];
 }

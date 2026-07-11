@@ -745,8 +745,7 @@ export function getServicesSeo(locale: Locale): ServicesSeoContent {
 
 export function getServicePageMeta(locale: Locale, serviceId: ServiceCategoryId) {
   const content = SERVICES_SEO[locale].categories[serviceId];
-  const combined = content.paragraphs.join(" ");
-  const description = combined.length > 160 ? `${combined.slice(0, 157).trim()}…` : combined;
+  const description = content.paragraphs[0] ?? content.description;
   return {
     title: content.heading,
     description,

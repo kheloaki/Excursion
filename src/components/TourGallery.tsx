@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useLocale } from "@/i18n/LocaleProvider";
+import { tourGalleryAlt } from "@/lib/image-metadata";
 
 export default function TourGallery({
   images,
@@ -28,7 +29,7 @@ export default function TourGallery({
           >
             <Image
               src={src}
-              alt={`${title} — ${dict.tour.photoGallery}`}
+              alt={tourGalleryAlt(title, src)}
               fill
               className="object-cover hover:scale-105 transition-transform duration-500"
               sizes="(max-width: 768px) 50vw, 33vw"

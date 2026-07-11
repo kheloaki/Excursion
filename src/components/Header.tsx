@@ -11,6 +11,7 @@ import { getHomePath, pagePath } from "@/i18n/routing";
 import Button from "@/components/ui/Button";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { cn } from "@/lib/utils";
+import { imageAltFromSrc } from "@/lib/image-metadata";
 
 export default function Header() {
   const { locale, dict } = useLocale();
@@ -111,7 +112,7 @@ export default function Header() {
                           className="group flex gap-3 p-3 rounded-sm hover:bg-white/5 border border-transparent hover:border-gold/20 transition-all"
                         >
                           <div className="relative w-16 h-16 shrink-0 rounded-sm overflow-hidden border border-border">
-                            <Image src={cat.image} alt={labels.title} fill className="object-cover" sizes="64px" />
+                            <Image src={cat.image} alt={imageAltFromSrc(cat.image, labels.title)} fill className="object-cover" sizes="64px" />
                           </div>
                           <div className="min-w-0">
                             <div className="flex items-center gap-2 mb-1">
